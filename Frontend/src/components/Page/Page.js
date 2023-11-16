@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useMatch, useResolvedPath, useNavigate } from "react-router-dom";
 
-import './Page.css';
+import '../Page/Styles.css';
 
 const Page = () => {
     const navigate = useNavigate();
