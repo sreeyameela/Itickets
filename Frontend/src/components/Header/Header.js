@@ -8,9 +8,7 @@ const Header = (props) => {
         <Fragment>
             <header className='header-logo'>
                 <img width="200" height="80" src={linkedinIcon} />
-                    <button type="submit" className="header-login-button">
-                       Sign in 
-                    </button>
+              
             </header>
         </Fragment>
     );
