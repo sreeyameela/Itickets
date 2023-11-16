@@ -1,12 +1,32 @@
+import React, { useState } from 'react';
+import { Link, useMatch, useResolvedPath, useNavigate } from "react-router-dom";
+
 import './Page.css';
 
 const Page = () => {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSignIn = (e) => {
+        e.preventDefault();
+
+        // Check if the provided email and password match the expected values
+        if (email === 'ticket@gmail.com' && password === 'ticket') {
+            // Redirect to a new page (you can replace '/empty-page' with the actual path)
+            alert('User Logged In');
+            navigate('/Admin');
+        } else {
+            // Handle incorrect email/password (e.g., show an error message)
+            alert('Invalid email or password');
+        }
+    };
     return (
         <div className='container'>
             <div className="row rowclass">
                 <div className="col-6" style={{ borderRight: '1px solid black' }}>
                     <h2 className="login-heading">Sign in to your account</h2>
-                    <form>
+                    <form onSubmit={handleSignIn}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input
@@ -14,6 +34,8 @@ const Page = () => {
                                 id="email"
                                 placeholder="Email address"
                                 required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
                         <div className="form-group">
@@ -23,6 +45,8 @@ const Page = () => {
                                 id="password"
                                 placeholder="Password"
                                 required
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
                         <p className="forgot-pass">Forgot Password?</p>
