@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../Page/Styles.css";
 
-
 const Sidebar = () => {
   const [isDepartmentsOpen, setDepartmentsOpen] = useState(false);
 
@@ -10,7 +9,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar sidebar-show" id="mySidebar" style={{ height: "100%", background:"#555!important" }}>
+    <div className="sidebar sidebar-show" id="mySidebar" style={{ height: "100vh", background: "#555!important", boxShadow: "1px" }}>
       <ul className="sidebar-nav">
         <li className="nav-title">Our Services</li>
         <li className="nav-item">
@@ -23,9 +22,9 @@ const Sidebar = () => {
             <i className="nav-icon cil-speedometer"></i> Student Metrics
           </a>
         </li>
-{/* departments dropdown in sidebar */}
 
-        {/* <li className={`nav-item nav-group ${isDepartmentsOpen ? "open" : ""}`}>
+        {/* Departments dropdown in sidebar */}
+        <li className={`nav-item nav-group ${isDepartmentsOpen ? "open" : ""}`}>
           <a className="nav-link nav-group-toggle" onClick={toggleDepartments} href="#">
             <i className="nav-icon cil-puzzle"></i> Departments
           </a>
@@ -43,10 +42,10 @@ const Sidebar = () => {
               </li>
             </ul>
           )}
-        </li> */}
+        </li>
+        {/* ---------------- */}
 
-
-{/* ---------------- */}
+        {/* Additional items (you can uncomment and modify as needed) */}
         {/* <li className="nav-item mt-auto">
           <a className="nav-link nav-link-success" href="https://coreui.io">
             <i className="nav-icon cil-cloud-download"></i> Download CoreUI
