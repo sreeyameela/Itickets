@@ -15,6 +15,7 @@ const Page = () => {
         if (email === 'ticket@gmail.com' && password === 'ticket') {
             // Redirect to a new page (you can replace '/empty-page' with the actual path)
             alert('User Logged In');
+            localStorage.setItem('isUserLoggedIn',"yes");
             navigate('/Admin');
         } else {
             // Handle incorrect email/password (e.g., show an error message)
@@ -58,15 +59,7 @@ const Page = () => {
                 <div className="col-6">
                    <h2 className="login-heading">Register your account</h2>
                     <form>
-                        <div className="form-group">
-                            <label htmlFor="Name">Name</label>
-                            <input
-                                type="name"
-                                id="name"
-                                placeholder="Name"
-                                required
-                            />
-                        </div>
+                        
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input
