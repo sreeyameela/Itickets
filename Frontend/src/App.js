@@ -9,14 +9,14 @@ function App() {
   return (
    
     <Router>
-      <div className="App">
-        <Header />
+     
+       
         
         <Routes>
           <Route path="/" element={<Page />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
-      </div>
+     
     </Router>
   );
 }
