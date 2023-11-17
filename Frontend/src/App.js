@@ -1,9 +1,11 @@
 import './App.css';
-import Page from './components/Page/Page';
+import Login from './components/Page/Login';
 import Header from './components/Header/Header';
 import Admin from './components/Page/Admin';
 import SideBar from './components/Sidebar/Sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AdminAddUser from './components/Page/AdminAddUser';
+import User from './components/Page/User';
 
 function App() {
 
@@ -15,8 +17,10 @@ function App() {
         <Header />
         {isUserLoggedIn === 'yes' ? <SideBar /> : null}
         <Routes>
-          <Route path="/" element={<Page />} />  
+          <Route path="/" element={<Login />} />  
           <Route path="/admin" element={<Admin />} />
+          <Route path="/adminadduser" element={<AdminAddUser/>}/>
+          <Route path="/user" element={<User/>}/>
         </Routes>
       </div>
     </Router>

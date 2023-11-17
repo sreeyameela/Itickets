@@ -13,7 +13,7 @@ const Sidebar = () => {
       <ul className="sidebar-nav">
         <li className="nav-title">Our Services</li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/adminadduser">
             <i className="nav-icon cil-speedometer"></i> Admin Dashboard
           </a>
         </li>
@@ -40,6 +40,7 @@ const Sidebar = () => {
                   <i className="nav-icon cil-puzzle"></i> Data Science
                 </a>
               </li>
+              
             </ul>
           )}
         </li>
@@ -57,7 +58,13 @@ const Sidebar = () => {
             <strong>PRO</strong>
           </a>
         </li> */}
+        <li className="nav-item">
+          <a className="nav-link" href="/user">
+            <i className="nav-icon cil-speedometer"></i> User Dashboard
+          </a>
+        </li>
       </ul>
+
       <button className="sidebar-toggler" type="button"></button>
     </div>
   );
