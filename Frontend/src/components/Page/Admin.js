@@ -1,77 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Card, Container, Row, Col } from "react-bootstrap";
-import Header from "../Header/Header";
-import Sidebar from "../Header/Sidebar";
-
-import '../Page/Styles.css';
-
+import React from 'react';
+import SideBar from '../Sidebar/Sidebar';
 const Admin = () => {
-  return (
-    <Container fluid>
-      {/* Header Row */}
-      <Row>
-        <Col md={12}>
-          <Header />
-        </Col>
-      </Row>
+    return (
+           
 
-      {/* Main Content Row */}
-      <Row>
-        {/* Sidebar */}
-        <Col md={3} className="sidebar-col">
-          <Sidebar />
-        </Col>
-        
-        {/* Main Content */}
-        <Col md={9} className="main-content-col">
-          <Row>
-            <Col md={12}>
-              <h1>Hello Admin</h1>
-              <Link to="/">Logout</Link>
-            </Col>
+        <div className="container-fluid">
+            <div className="row">
+                <SideBar />
+                <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        {/* <h1 className="h2">Dashboard</h1> */}
+                        <div className="btn-toolbar mb-2 mb-md-0">
+                            <div className="btn-group me-2">
+                                <button type="button" className="btn btn-sm btn-outline-secondary">Share</button>
+                                <button type="button" className="btn btn-sm btn-outline-secondary">Export</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Section title</h2>
+                    <div className="table-responsive">
+                        <table className="table table-striped table-sm">
+                            <thead>
+                                <tr>    
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Department</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Action</th>
+                                </tr>
 
-            {/* Cards */}
-            <Col md={3} sm={6}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Card 1</Card.Title>
-                  <Card.Text>This is the content of Card 1.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={3} sm={6}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Card 2</Card.Title>
-                  <Card.Text>This is the content of Card 2.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={3} sm={6}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Card 3</Card.Title>
-                  <Card.Text>This is the content of Card 3.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={3} sm={6}>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Card 4</Card.Title>
-                  <Card.Text>This is the content of Card 4.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+                                
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Computer Science</td>
+                                    <td></td>   
+                                    <td>1234567890</td>
+                                    <td><button type="button" className="btn btn-sm btn-outline-secondary">Edit</button></td>
+                                </tr>   
+                                </tbody>
+                        </table>
+                    </div>
+                </main>
+            </div>
+        </div>
+           
+    )
+}
 
 export default Admin;
