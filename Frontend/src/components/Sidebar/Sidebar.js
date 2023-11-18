@@ -18,11 +18,7 @@ const Sidebar = () => {
             <i className="nav-icon cil-speedometer"></i> Admin Metrics
           </a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link" href="admin">
-            <i className="nav-icon cil-speedometer"></i> Sample Page
-          </a>
-        </li>
+        
 
         {/* Departments dropdown in sidebar */}
         <li className={`nav-item nav-group ${isDepartmentsOpen ? "open" : ""}`}>
