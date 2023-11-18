@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 
 const Admin = () => {
   return (
-    <div className="container-fluid">
+    <div className="container">
     <Row>
       {/* Header */}
       <Col xs={12}>

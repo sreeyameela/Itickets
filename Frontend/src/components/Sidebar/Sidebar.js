@@ -19,8 +19,8 @@ const Sidebar = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            <i className="nav-icon cil-speedometer"></i> Student Metrics
+          <a className="nav-link" href="admin">
+            <i className="nav-icon cil-speedometer"></i> Sample Page
           </a>
         </li>
 
