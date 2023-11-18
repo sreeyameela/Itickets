@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useMatch, useResolvedPath, useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import './Styles.css';
 
-import '../Page/Styles.css';
-
-const Page = () => {
+const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     const handleSignIn = (e) => {
         e.preventDefault();
@@ -15,15 +15,31 @@ const Page = () => {
         if (email === 'ticket@gmail.com' && password === 'ticket') {
             // Redirect to a new page (you can replace '/empty-page' with the actual path)
             alert('User Logged In');
-            localStorage.setItem('isUserLoggedIn',"yes");
+            localStorage.setItem('isUserLoggedIn', 'yes');
             navigate('/Admin');
         } else {
             // Handle incorrect email/password (e.g., show an error message)
             alert('Invalid email or password');
         }
     };
+
+    const handleSignUp = (e) => {
+        e.preventDefault();
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+
+        // Perform registration logic here
+
+        // For now, just show an alert
+        alert('User Registered');
+    };
+
     return (
-        <div className='container'>
+        <div className="container">
             <div className="row rowclass">
                 <div className="col-6" style={{ borderRight: '1px solid black' }}>
                     <h2 className="login-heading">Sign in to your account</h2>
@@ -57,9 +73,8 @@ const Page = () => {
                     </form>
                 </div>
                 <div className="col-6">
-                   <h2 className="login-heading">Register your account</h2>
-                    <form>
-                        
+                    <h2 className="login-heading">Register your account</h2>
+                    <form onSubmit={handleSignUp}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input
@@ -79,12 +94,14 @@ const Page = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="confpassword">Confirm Password</label>
+                            <label htmlFor="confirmPassword">Confirm Password</label>
                             <input
-                                type="confpassword"
-                                id="confpassword"
+                                type="password"
+                                id="confirmPassword"
                                 placeholder="Confirm Password"
                                 required
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
                             />
                         </div>
                         <button type="submit" className="login-button">
@@ -94,7 +111,7 @@ const Page = () => {
                 </div>
             </div>
         </div>
+    );
+};
 
-    )
-}
-export default Page;
+export default Login;

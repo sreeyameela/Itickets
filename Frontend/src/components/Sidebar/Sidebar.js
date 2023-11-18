@@ -9,12 +9,13 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar sidebar-show" id="mySidebar" style={{ height: "100vh", background: "#555!important", boxShadow: "1px" }}>
-      <ul className="sidebar-nav">
+    <div className="sidebar" style={{ background: "#555!important", boxShadow: "1px" }}>
+      <button className="sidebar-toggler" type="button" onClick={toggleDepartments}></button>
+      <ul className={`sidebar-nav ${isDepartmentsOpen ? "open" : ""}`}>
         <li className="nav-title">Our Services</li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            <i className="nav-icon cil-speedometer"></i> Admin Dashboard
+          <a className="nav-link" href="/metrics">
+            <i className="nav-icon cil-speedometer"></i> Admin Metrics
           </a>
         </li>
         <li className="nav-item">
@@ -43,22 +44,8 @@ const Sidebar = () => {
             </ul>
           )}
         </li>
-        {/* ---------------- */}
-
-        {/* Additional items (you can uncomment and modify as needed) */}
-        {/* <li className="nav-item mt-auto">
-          <a className="nav-link nav-link-success" href="https://coreui.io">
-            <i className="nav-icon cil-cloud-download"></i> Download CoreUI
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link nav-link-danger" href="https://coreui.io/pro/">
-            <i className="nav-icon cil-layers"></i> Try CoreUI
-            <strong>PRO</strong>
-          </a>
-        </li> */}
+        
       </ul>
-      <button className="sidebar-toggler" type="button"></button>
     </div>
   );
 };

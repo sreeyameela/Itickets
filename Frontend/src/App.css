@@ -1,52 +1,38 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.App {
+  text-align: center;
 }
 
-
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'your-preferred-font', sans-serif;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.app-container {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-}
-
-.main-content-row {
-  flex: 1;
-  margin: 0; /* Remove margin to avoid unwanted gaps */
-}
-
-.sidebar-col {
-  height: 100%;
-}
-
-.main-content-col {
-  height: 100%;
-}
-
-/* Add specific styling for Header, Sidebar, and Main Content if needed */
-.header {
-  background-color: #333; /* Example background color for the header */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  padding: 10px;
 }
 
-.sidebar {
-  background-color: white; /* Example background color for the sidebar */
-  padding: 10px;
-  /* Add any additional styling you need for the sidebar */
+.App-link {
+  color: #61dafb;
 }
 
-/* Adjustments for larger screens */
-@media (min-width: 992px) {
-  .main-content-row {
-    margin-left: 0; /* Remove left margin for larger screens */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
