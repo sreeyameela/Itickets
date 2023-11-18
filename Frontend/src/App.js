@@ -9,13 +9,13 @@ import User from './components/Page/User';
 
 function App() {
 
-   const isUserLoggedIn = localStorage.getItem('isUserLoggedIn');
+   const mail = localStorage.getItem('mail');
 
   return (
     <Router>
       <div className="App">
         <Header />
-        {isUserLoggedIn === 'yes' ? <SideBar /> : null}
+        {(mail === 'ticket@gmail.com' ) || (mail === 'admin@gmail.com' ) ? <SideBar /> : null}
         <Routes>
           <Route path="/" element={<Login />} />  
           <Route path="/admin" element={<Admin />} />

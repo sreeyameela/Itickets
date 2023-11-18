@@ -11,16 +11,18 @@ const Header = (props) => {
     const navigate = useNavigate(); 
 
     const handleLogout = () => {
-        localStorage.removeItem('isUserLoggedIn');
-
+        localStorage.removeItem('mail','false');
         navigate('/');
     };
-    const isUserLoggedIn = localStorage.getItem('isUserLoggedIn');
-    const renderLogoutButton = isUserLoggedIn ? (
+
+    const userEmail = localStorage.getItem('mail');
+    const userRole = userEmail === 'ticket@gmail.com' ? 'User' : userEmail === 'admin@gmail.com' ? 'Admin' : '';
+
+    const renderLogoutButton = userEmail ? (
         <DropdownButton
             variant="outline-secondary"
             id="dropdown-basic-button"
-            title="Admin"
+            title={userRole}
             className="ml-3"
         >
             <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>

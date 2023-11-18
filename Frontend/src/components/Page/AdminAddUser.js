@@ -45,6 +45,8 @@ const AdminAddUser = () => {
         <div className="container-fluid" style={{ marginTop: '70px' }}>
             <div className="row">
                 <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <br></br>
+             
                     <h2>Welcome ADMIN!</h2>
                     <br />
                     <Button variant="success" onClick={handleShowModal}>

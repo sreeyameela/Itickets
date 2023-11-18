@@ -11,14 +11,13 @@ const Page = () => {
     const handleSignIn = (e) => {
         e.preventDefault();
 
-        // Check if the provided email and password match the expected values
         if (email === 'ticket@gmail.com' && password === 'ticket') {
-            // Redirect to a new page (you can replace '/empty-page' with the actual path)
-            alert('User Logged In');
-            localStorage.setItem('isUserLoggedIn',"yes");
-            navigate('/Admin');
+            localStorage.setItem('mail', 'ticket@gmail.com');
+            navigate('/user');
+        } else if (email === 'admin@gmail.com' && password === 'admin') {
+            localStorage.setItem('mail', 'admin@gmail.com');
+            navigate('/adminadduser');
         } else {
-            // Handle incorrect email/password (e.g., show an error message)
             alert('Invalid email or password');
         }
     };
