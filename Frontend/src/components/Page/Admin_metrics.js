@@ -1,4 +1,9 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import BootstrapTable from 'react-bootstrap-table-next';
+import { Card, Container, Row, Col } from "react-bootstrap";
+import "../Page/Styles.css";
+import ticketData from "./Ticket_data.json";
 import {
   AreaChart,
   Area,
@@ -9,10 +14,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { Card, Container, Row, Col, Table } from "react-bootstrap";
-import "../Page/Styles.css";
-import ticketData from "./Ticket_data.json";
-
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
 const data = ticketData.map((entry) => ({
@@ -21,34 +22,17 @@ const data = ticketData.map((entry) => ({
   date: entry.Date,
   ticketsclosed: entry.TicketsClosed,
   ticketsopened: entry.TicketsOpened,
- 
 }));
 
-// const tdata = [
-//   // Your data
-//   { name: "Anom", Description: "about classes" },
-//   { name: "Raghu", Description: "about CPT application" },
-//   { name: "Preetham", Description: "List of Required Docs for the Processing" },
-//   { name: "Roy", Description: "Summer Vacation?" },
-//   { name: "Subham", Description: "Applied OPT and waiting for reply" },
-// ];
-
-
 const AdminMetrics = () => {
-
   const [openedTickets, setOpenedTickets] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        console.log('Fetching opened tickets...');
         const response = await fetch('http://localhost:9999/getOpenedTickets');
         if (response.ok) {
-          console.log('Data received successfully.');
           const data = await response.json();
-          console.log('Data from server:', data);
-
-          // Update the state with the fetched data
           setOpenedTickets(data);
         } else {
           console.error('Failed to fetch data from the server');
@@ -60,7 +44,7 @@ const AdminMetrics = () => {
 
     fetchData();
   }, []);
-  
+
   const cardData = [
     { title: "Tickets Created", value: 100, variant: "primary" },
     { title: "Tickets Solved", value: 200, variant: "success" },
@@ -68,26 +52,42 @@ const AdminMetrics = () => {
     { title: "Tickets Drafted", value: 400, variant: "light" },
   ];
 
+  const columns = [
+    { dataField: 'title', text: 'Title' },
+    { dataField: 'description', text: 'Description' },
+    { dataField: 'category', text: 'Category' },
+    { dataField: 'priority', text: 'Priority' },
+    { dataField: 'assignee', text: 'Assignee' },
+    {
+      dataField: 'status',
+      text: 'Status',
+      formatter: (cell, row) => (
+        <span style={{ color: 'green', fontWeight: 'bold' }}>OPENED</span>
+      ),
+    },
+  ];
+
+  const [page, setPage] = useState(1);
+  const [sizePerPage, setSizePerPage] = useState(10);
+
+  const handleTableChange = (type, { page, sizePerPage }) => {
+    setPage(page);
+    setSizePerPage(sizePerPage);
+  };
+
   return (
     <Container className="p-0">
-      {/* Header Row */}
       <Row className="container-header">
         <Col xs={12}></Col>
       </Row>
 
-      {/* Sidebar and Main Area Row */}
       <Row className="main-area">
         <Col xs={3} md={3}></Col>
         <Col xs={9} md={9}>
-          {/* Main content, including metrics */}
           <Row className="card-container">
             {cardData.map((data, index) => (
               <Col key={index} xs={12} md={6} lg={3}>
-                <Card
-                  bg={data.variant}
-                  text={data.variant === "light" ? "dark" : "white"}
-                  className="mb-3"
-                >
+                <Card bg={data.variant} text={data.variant === "light" ? "dark" : "white"} className="mb-3">
                   <Card.Header>{data.title}</Card.Header>
                   <Card.Body>
                     <Card.Title>{data.value}</Card.Title>
@@ -97,7 +97,6 @@ const AdminMetrics = () => {
             ))}
           </Row>
 
-          {/* Area Chart and Table */}
           <Row>
             <Col xs={12} md={12} className="chart-container">
               <h3 className="text-center mb-3">Tickets Overview</h3>
@@ -127,36 +126,15 @@ const AdminMetrics = () => {
                 </AreaChart>
               </ResponsiveContainer>
             </Col>
-            <Col xs={12} md={12} className="table-container">
+            <Col xs={12} md={12} lg={12} className="table-container">
               <h3 className="text-center mb-3">Tickets Details</h3>
-              <Table>
-                <thead>
-                  <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Category</th>
-                    <th>Priority</th>
-                    <th>Assignee</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {openedTickets.map((ticket) => (
-                  <tr key={ticket.id}>
-                    <td>{ticket.title}</td>
-                    <td>{ticket.description}</td>
-                    <td>{ticket.category}</td>
-                    <td>{ticket.priority}</td>
-                    <td>{ticket.assignee}</td>
-                    <td style={{ color: 'green', fontWeight: 'bold' }}>
-                      {/* Replace with an appropriate tick symbol */}
-                      OPENED
-                    </td>
-                  </tr>
-                ))}
-
-                </tbody>
-              </Table>
+              <BootstrapTable
+                keyField='id'
+                data={openedTickets}
+                columns={columns}
+                pagination={paginationFactory({ page, sizePerPage })}
+                onTableChange={handleTableChange}
+              />
             </Col>
           </Row>
         </Col>
