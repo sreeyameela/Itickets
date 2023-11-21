@@ -16,7 +16,17 @@ const Login = () => {
             // Redirect to a new page (you can replace '/empty-page' with the actual path)
             alert('User Logged In');
             localStorage.setItem('isUserLoggedIn', 'yes');
-            navigate('/Admin');
+            navigate('/userdashboard');
+        } else {
+            // Handle incorrect email/password (e.g., show an error message)
+            alert('Invalid email or password');
+        }
+
+        if (email === 'admin@gmail.com' && password === 'admin') {
+            // Redirect to a new page (you can replace '/empty-page' with the actual path)
+            alert('admin Logged In');
+            localStorage.setItem('isUserLoggedIn', 'yes');
+            navigate('/admindashboard');
         } else {
             // Handle incorrect email/password (e.g., show an error message)
             alert('Invalid email or password');

@@ -5,7 +5,10 @@ import Header from './components/Header/Header';
 import Admin from './components/Page/Admin';
 import Admin_metrics from './components/Page/Admin_metrics';
 import SideBar from './components/Sidebar/Sidebar';
+import User from './components/Page/User';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import AdminAddUser from './components/Page/AdminAddUser';
+import FAQ from './components/Page/FAQ';
 
 function App() {
   const isUserLoggedIn = localStorage.getItem('isUserLoggedIn') === 'yes';
@@ -29,8 +32,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/metrics" element={<Admin_metrics />} />
-          {!isUserLoggedIn && <Route path="/login" element={<Navigate to="/" />} />}
+          <Route path="/adminMetrics" element={<Admin_metrics />} />
+          <Route path="/userdashboard" element={<User />} />
+          <Route path="/useradd" element={<AdminAddUser />} />
+          <Route path="/faq" element={<FAQ />} />
+          {!isUserLoggedIn && <Route path="/login" element={<Navigate to="/login" />} />}
         </Routes>
       </div>
     </Router>

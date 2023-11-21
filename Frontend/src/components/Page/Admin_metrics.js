@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import {
   AreaChart,
   Area,
@@ -8,7 +8,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { Card, Container, Row, Col } from "react-bootstrap";
+
+import { Card, Container, Row, Col, Table } from "react-bootstrap";
 import "../Page/Styles.css";
 import ticketData from "./Ticket_data.json";
 
@@ -23,16 +24,43 @@ const data = ticketData.map((entry) => ({
  
 }));
 
-const tdata = [
-  // Your data
-  { name: "Anom", Description: "about classes" },
-  { name: "Raghu", Description: "about CPT application" },
-  { name: "Preetham", Description: "List of Required Docs for the Processing" },
-  { name: "Roy", Description: "Summer Vacation?" },
-  { name: "Subham", Description: "Applied OPT and waiting for reply" },
-];
+// const tdata = [
+//   // Your data
+//   { name: "Anom", Description: "about classes" },
+//   { name: "Raghu", Description: "about CPT application" },
+//   { name: "Preetham", Description: "List of Required Docs for the Processing" },
+//   { name: "Roy", Description: "Summer Vacation?" },
+//   { name: "Subham", Description: "Applied OPT and waiting for reply" },
+// ];
+
 
 const AdminMetrics = () => {
+
+  const [openedTickets, setOpenedTickets] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        console.log('Fetching opened tickets...');
+        const response = await fetch('http://localhost:9999/getOpenedTickets');
+        if (response.ok) {
+          console.log('Data received successfully.');
+          const data = await response.json();
+          console.log('Data from server:', data);
+
+          // Update the state with the fetched data
+          setOpenedTickets(data);
+        } else {
+          console.error('Failed to fetch data from the server');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  
   const cardData = [
     { title: "Tickets Created", value: 100, variant: "primary" },
     { title: "Tickets Solved", value: 200, variant: "success" },
@@ -49,8 +77,8 @@ const AdminMetrics = () => {
 
       {/* Sidebar and Main Area Row */}
       <Row className="main-area">
-        <Col xs={9} md={3}></Col>
-        <Col xs={12} md={9}>
+        <Col xs={3} md={3}></Col>
+        <Col xs={9} md={9}>
           {/* Main content, including metrics */}
           <Row className="card-container">
             {cardData.map((data, index) => (
@@ -101,24 +129,34 @@ const AdminMetrics = () => {
             </Col>
             <Col xs={12} md={12} className="table-container">
               <h3 className="text-center mb-3">Tickets Details</h3>
-              <table className="table">
+              <Table>
                 <thead>
                   <tr>
-                    <th>Ticket</th>
-                    <th>Name</th>
+                    <th>Title</th>
                     <th>Description</th>
+                    <th>Category</th>
+                    <th>Priority</th>
+                    <th>Assignee</th>
+                    <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {tdata.map((val, key) => (
-                    <tr key={key}>
-                      <td>{key + 1}</td>
-                      <td>{val.name}</td>
-                      <td>{val.Description}</td>
-                    </tr>
-                  ))}
+                {openedTickets.map((ticket) => (
+                  <tr key={ticket.id}>
+                    <td>{ticket.title}</td>
+                    <td>{ticket.description}</td>
+                    <td>{ticket.category}</td>
+                    <td>{ticket.priority}</td>
+                    <td>{ticket.assignee}</td>
+                    <td style={{ color: 'green', fontWeight: 'bold' }}>
+                      {/* Replace with an appropriate tick symbol */}
+                      OPENED
+                    </td>
+                  </tr>
+                ))}
+
                 </tbody>
-              </table>
+              </Table>
             </Col>
           </Row>
         </Col>
