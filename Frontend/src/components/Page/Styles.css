@@ -373,6 +373,17 @@ header h1 {
   position: relative; /* Add position relative for proper positioning of pseudo-element */
 }
 
+.button-container {
+  flex: 1;
+  margin: 0 15px 15px 0;
+ 
+  margin-right: 15px;
+  position: relative;
+  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
+}
+
 .faqs .faq .faq-question {
   font-size: 20px;
   padding-right: 8%;
@@ -423,5 +434,11 @@ header h1 {
     margin-right: 0;
     min-width: auto; /* Remove minimum width for smaller screens */
     max-width: none; /* Remove maximum width for smaller screens */
+    .button-container {
+      flex: 100%;
+      margin-right: 0;
+      min-width: auto;
+      max-width: none;
+    }
   }
 }

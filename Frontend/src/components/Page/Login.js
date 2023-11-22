@@ -17,14 +17,9 @@ const Login = () => {
             alert('User Logged In');
             localStorage.setItem('isUserLoggedIn', 'yes');
             navigate('/userdashboard');
-        } else {
-            // Handle incorrect email/password (e.g., show an error message)
-            alert('Invalid email or password');
-        }
-
-        if (email === 'admin@gmail.com' && password === 'admin') {
+        } else if (email === 'admin@gmail.com' && password === 'admin') {
             // Redirect to a new page (you can replace '/empty-page' with the actual path)
-            alert('admin Logged In');
+            alert('Admin Logged In');
             localStorage.setItem('isUserLoggedIn', 'yes');
             navigate('/admindashboard');
         } else {
@@ -51,9 +46,9 @@ const Login = () => {
     return (
         <div className="container">
             <div className="row rowclass">
-                <div className="col-6" style={{ borderRight: '1px solid black' }}>
+                <div className="col-md-6 order-md-1 order-2 sign-in" style={{ borderRight: '1px solid black' }}>
                     <h2 className="login-heading">Sign in to your account</h2>
-                    <form onSubmit={handleSignIn}>
+                   <form onSubmit={handleSignIn}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input
@@ -82,7 +77,7 @@ const Login = () => {
                         </button>
                     </form>
                 </div>
-                <div className="col-6">
+                <div className="col-md-6 order-md-2 order-1 sign-up">
                     <h2 className="login-heading">Register your account</h2>
                     <form onSubmit={handleSignUp}>
                         <div className="form-group">

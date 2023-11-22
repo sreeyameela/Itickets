@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Styles.css";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+// import Modal from 'react-bootstrap/Modal';
 import { Col, Row } from 'react-bootstrap';
 
 function CreateFAQ() {
-  const [show, setShow] = useState(false);
-  const [image, setImage] = useState("");
+//   const [show, setShow] = useState(false);
+//   const [image, setImage] = useState("");
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [faqs, setFaqs] = useState([]);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const handleChange = (e) => {
-    setImage(e.target.files[0]);
-  };
+//   const handleClose = () => setShow(false);
+//   const handleShow = () => setShow(true);
+//   const handleChange = (e) => {
+//     setImage(e.target.files[0]);
+//   };
 
   const FAQ = ({ faq, index, toggleFAQ }) => {
     return (
@@ -120,9 +120,58 @@ function CreateFAQ() {
   };
 
   return (
-   <div className="faq-container" style={{ margin: "80px 0 0 80px" }}>
+    <div className="faq-container" style={{ margin: "80px 0 0 80px" }}>
+       {/* modal button for create faq */}
+       {/* <Row> 
+
+        
+        <Col xs={12} order-md-2 order-1 md={8} lg={9}>
+        
+        </Col>
+        <Col xs={12} order-md-1 order-xs-1 md={4} lg={3} style={{ marginTop: "80px" }}>
+        <Button variant="primary" onClick={handleShow}>
+            Create FAQ
+        </Button>
+        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+            <Modal.Header closeButton>
+              <Modal.Title>Add Query</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Label>Query</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter the Query"
+                    autoFocus
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                  <Form.Label>Answer</Form.Label>
+                  <Form.Control as="textarea" rows={3} />
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Upload Image</Form.Label>
+                  <Form.Control type="file" onChange={handleChange} />
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handleClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </Col>
+       
+        </Row> */}
+       
       <Row>
-        <Col xs={12} md={8} lg={9}>
+        
+        <Col xs={12} order-md-2 order-1 md={8} lg={9}>
           {/* FAQ Section */}
           <div className="faq-list">
             <div className="faqs">
@@ -134,7 +183,7 @@ function CreateFAQ() {
             </div>
           </div>
         </Col>
-        <Col xs={12} md={4} lg={3} style={{ marginTop: "80px" }}>
+        <Col xs={12} order-md-1 order-xs-1 md={4} lg={3} style={{ marginTop: "80px" }}>
           {/* Topics Section */}
           <div className="topics">
             <h2>Topics</h2>

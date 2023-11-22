@@ -110,7 +110,7 @@ const AdminAddUser = () => {
                                 </Form.Group>
                                 <Form.Group controlId="formPassword">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Password" value={userDetails.password} onChange={(e) => setUserDetails({ ...userDetails, password: e.target.value })} required />
+                                    <Form.Control type="password" placeholder="Enter Password" value={userDetails.password} onChange={(e) => setUserDetails({ ...userDetails, password: e.target.value })} required />
                                 </Form.Group>
                                 <Form.Group controlId="formEmail">
                                     <Form.Label>Email</Form.Label>
