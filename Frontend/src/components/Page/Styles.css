@@ -1,7 +1,7 @@
-.container{
+/* .container{
     margin: 5rem 0rem;
     
-}
+} */
 .rowclass{
     width: 95vw;
 
@@ -165,26 +165,13 @@
 /* fag page styling  */
 
 
-#header{
-  
-  grid-area: header;
-}
-#sidebar{
-   
-  grid-area: sidebar;
-
-}
-#main{
-  
-  grid-area: main;
-}
 
 
 
 .container {
   margin: 2rem auto; /* Center the container horizontally */
 }
-table{
+table {
   border: 1px solid ;
   color: #808080;
   padding:100px;
@@ -364,26 +351,32 @@ header h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
-
-.faqs {
-  width: 100vh;
-  max-width: 768px;
-  margin: 0 auto;
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 15px;
+  margin: 80px auto 0;
 }
 
 .faqs .faq {
-  margin: 15px;
+  flex: 1;
+  margin: 0 15px 15px 0;
   padding: 15px;
+  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: margin 0.4s ease;
+  position: relative; /* Add position relative for proper positioning of pseudo-element */
 }
 
 .faqs .faq .faq-question {
-  position: relative;
   font-size: 20px;
-  padding-right: 80px;
+  padding-right: 8%;
+  cursor: pointer;
   transition: all 0.4s ease;
 }
 
@@ -391,7 +384,7 @@ header h1 {
   content: "+";
   position: absolute;
   top: 50%;
-  right: 0px;
+  right: 0;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -402,11 +395,7 @@ header h1 {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.2s ease;
-}
-
-.faqs .faq.open .faq-question {
-  margin-bottom: 15px;
+  transition: all 0.4s ease;
 }
 
 .faqs .faq.open .faq-question::after {
@@ -416,4 +405,23 @@ header h1 {
 .faqs .faq.open .faq-answer {
   max-height: 1000px;
   opacity: 1;
+}
+
+.topics {
+  flex: 1;
+  margin-top: 15px;
+  padding: 15px;
+  background: #e6f7ff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .faqs .faq, .topics {
+    flex: 100%;
+    margin-right: 0;
+    min-width: auto; /* Remove minimum width for smaller screens */
+    max-width: none; /* Remove maximum width for smaller screens */
+  }
 }
