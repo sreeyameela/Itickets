@@ -21,26 +21,52 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
-        {isUserLoggedIn && (
+      
+      
+      {/* {isUserLoggedIn && (
           <div>
             <Link to="/admin">Admin</Link>
             <button onClick={handleLogout}>Logout</button>
             <SideBar />
           </div>
-        )}
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/adminMetrics" element={<Admin_metrics />} />
-          <Route path="/userdashboard" element={<User />} />
-          <Route path="/useradd" element={<AdminAddUser />} />
-          <Route path="/faq" element={<FAQ />} />
-          {!isUserLoggedIn && <Route path="/login" element={<Navigate to="/login" />} />}
-        </Routes>
+        )} */}
+        <div className="container">
+          <div >
+          <Header />
+          </div>
+          <div className="row flex">
+            <div className="col-2">
+            <SideBar/>
+            </div>
+            <div className='col-10'>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/adminMetrics" element={<Admin_metrics />} />
+              <Route path="/userdashboard" element={<User />} />
+              <Route path="/useradd" element={<AdminAddUser />} />
+              <Route path="/faq" element={<FAQ />} />
+              {!isUserLoggedIn && <Route path="/login" element={<Navigate to="/login" />} />}
+            </Routes>
+            </div>
+
+        
+
+          </div>
+          
+        </div>
+        
       </div>
+      
     </Router>
   );
 }
 
 export default App;
+
+
+
+
+// <Header />
+        
+        

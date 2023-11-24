@@ -76,13 +76,11 @@ const AdminMetrics = () => {
   };
 
   return (
-    <Container className="p-0">
-      <Row className="container-header">
-        <Col xs={12}></Col>
-      </Row>
+    <Container>
+      
 
-      <Row className="main-area">
-        <Col xs={3} md={3}></Col>
+      <Row className="main-area" >
+       
         <Col xs={9} md={9}>
           <Row className="card-container">
             {cardData.map((data, index) => (

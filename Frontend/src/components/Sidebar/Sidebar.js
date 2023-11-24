@@ -74,9 +74,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar" style={{ background: "#555!important", boxShadow: "1px" }}>
+    <div className="sidebar m-0 p-0" style={{ background: "#555!important", boxShadow: "1px" }}>
       <button className="sidebar-toggler" type="button" onClick={toggleDepartments}></button>
-      <ul className={`sidebar-nav ${isDepartmentsOpen ? "open" : ""}`}>
+      <ul className={`sidebar-nav ${isDepartmentsOpen ? "open" : ""}  p-0`}>
         <li className="nav-title">Our Services</li>
         <li className="nav-item">
         <a className="nav-link" href="/useradd">
