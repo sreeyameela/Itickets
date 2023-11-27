@@ -76,13 +76,13 @@ const AdminMetrics = () => {
   };
 
   return (
-    <Container>
+    <div className="container p-10" >
       
 
-      <Row className="main-area" >
+      <div className="main-area row p-0 m-0 " >
        
-        <Col xs={9} md={9}>
-          <Row className="card-container">
+        <Col xs={12} md={12}>
+          <div className="card-container row" style={{marginTop:"80px"}}>
             {cardData.map((data, index) => (
               <Col key={index} xs={12} md={6} lg={3}>
                 <Card bg={data.variant} text={data.variant === "light" ? "dark" : "white"} className="mb-3">
@@ -93,9 +93,9 @@ const AdminMetrics = () => {
                 </Card>
               </Col>
             ))}
-          </Row>
+          </div>
 
-          <Row>
+          <div className="row">
             <Col xs={12} md={12} className="chart-container">
               <h3 className="text-center mb-3">Tickets Overview</h3>
               <ResponsiveContainer width="100%" height={400}>
@@ -134,10 +134,10 @@ const AdminMetrics = () => {
                 onTableChange={handleTableChange}
               />
             </Col>
-          </Row>
+          </div>
         </Col>
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 

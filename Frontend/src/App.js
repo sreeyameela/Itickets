@@ -35,7 +35,7 @@ function App() {
           <Header />
           </div>
           <div className="row flex">
-            <div className="col-2">
+            <div className="col-2 p-0 m-0">
             <SideBar/>
             </div>
             <div className='col-10'>
