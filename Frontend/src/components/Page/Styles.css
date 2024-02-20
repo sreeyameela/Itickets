@@ -1,0 +1,444 @@
+/* .container{
+    margin: 5rem 0rem;
+    
+} */
+.rowclass{
+    width: 95vw;
+
+}
+
+.first{
+    border-right: 1px red;
+}
+
+.headerlogin{
+  color: #ee5b36;
+  font-size: 3rem;
+  width: 60%;
+  margin: 0.5rem auto;
+}
+
+
+.login-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 4rem;
+  }
+  
+  .form-group {
+    text-align: left;
+    width: 47%;
+    margin: 2rem 14rem;
+  }
+  
+  label {
+    display: block;
+    font-size: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .forgot-pass{
+    color: #0077b5;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%;
+    font-weight: bold;
+    text-align: left;
+    margin: 1rem 14rem;
+  }
+  .login-button {
+    background-color: #0077b5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+    margin: -2rem 14rem;
+  }
+  .signup-button{
+    background-color: #ffffff;
+    margin-top: 2rem;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+    margin: 2rem 14rem;
+  }
+  /* admin metrics */
+  .container-header {
+    padding: 20px;
+    
+    color: #fff;
+  }
+  .table-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  .chart-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }  
+  .card-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  
+  
+  @media (max-width: 1170px) {
+    .main-area {
+      width: 100%;
+  }
+}
+
+
+/* Add the following styles to your existing Styles.css or create a new CSS file */
+
+/* Table Styles */
+.table-container {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+/* Striped Rows */
+.table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+  background-color: #e8f5e9;
+  transition: background-color 0.3s;
+}
+
+/* Borders and Padding */
+.table th, .table td {
+  border: 1px solid #dee2e6;
+}
+
+/* Responsive Table */
+@media (max-width: 767px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .table th, .table td {
+    white-space: nowrap;
+  }
+}
+
+/* fag page styling  */
+
+
+
+
+/* 
+.container {
+  margin: 2rem auto;
+} */
+table {
+  border: 1px solid ;
+  color: #808080;
+  padding:100px;
+  width: 500px; 
+  height: 300px;
+  
+}
+th{
+  margin:10px;
+  padding-Left:10px;
+  color: black;
+  
+}
+
+td{
+margin:10px;
+padding-Left:10px;
+color: black;
+font-size: 15px;}
+
+tr{
+  margin:10px;
+  padding-Left:10px;
+  
+}
+
+
+.rowclass {
+  width: 100%; /* Full width for the row */
+  max-width: 1200px; /* Set a maximum width for larger screens */
+  margin: 0 auto; /* Center the rowclass horizontally */
+  display: flex; /* Use flexbox to make children flex items */
+  padding: 1px; /* Add some padding */
+}
+
+.col-lg-6 {
+  flex: 1; /* Each column takes equal space in the row */
+}
+
+.form-group {
+  text-align: left;
+  width: 100%; 
+  max-width: 400px; /* Set a maximum width for larger screens */
+  margin: 2rem auto; /* Center the form-group horizontally */
+}
+
+
+.login-image {
+  max-width: 100%; /* Ensure the image does not exceed its container width */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+
+.rowclass {
+  width: 95%; /* Use percentage for responsive design */
+  margin: 0 auto; /* Center the rowclass horizontally */
+}
+
+.first {
+  border-right: 1px solid red; /* Add 'solid' to specify the border style */
+}
+
+.headerlogin {
+  color: #ee5b36;
+  font-size: 2rem;
+  width: 60%;
+  margin: 0.5rem auto;
+  align-content: space-between;
+}
+
+.login-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 4rem;
+}
+
+
+
+label {
+  display: block;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  height: 3rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.forgot-pass {
+  color: #0077b5;
+  padding: 10px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 80%;
+  font-weight: bold;
+  text-align: left;
+  margin: 1rem auto; /* Center the forgot-pass horizontally */
+}
+
+.login-button {
+  background-color: #0077b5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40%;
+  margin: -2rem auto; /* Center the login-button horizontally */
+}
+
+.query {
+  background-color: #0077b5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40%;
+  margin: -2rem auto;
+  align-content: space-between;
+}
+
+
+.signup-button {
+  background-color: #ffffff;
+  margin-top: 2rem;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 40%;
+  margin: 2rem auto; /* Center the signup-button horizontally */
+}
+
+
+
+
+/* ---------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #3c3c3c;
+  border-bottom: 3px solid whitesmoke;
+}
+
+header h1 {
+  color: #eee;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+  margin: 80px auto 0;
+}
+
+.faqs .faq {
+  flex: 1;
+  margin: 0 15px 15px 0;
+  padding: 15px;
+  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: margin 0.4s ease;
+  position: relative; /* Add position relative for proper positioning of pseudo-element */
+}
+
+.button-container {
+  flex: 1;
+  margin: 0 15px 15px 0;
+ 
+  margin-right: 15px;
+  position: relative;
+  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.faqs .faq .faq-question {
+  font-size: 20px;
+  padding-right: 8%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease;
+}
+
+.faqs .faq .faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq.open .faq-question::after {
+  content: "-";
+}
+
+.faqs .faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.topics {
+  flex: 1;
+  margin-top: 15px;
+  padding: 15px;
+  background: #e6f7ff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .faqs .faq, .topics {
+    flex: 100%;
+    margin-right: 0;
+    min-width: auto; /* Remove minimum width for smaller screens */
+    max-width: none; /* Remove maximum width for smaller screens */
+    .button-container {
+      flex: 100%;
+      margin-right: 0;
+      min-width: auto;
+      max-width: none;
+    }
+  }
+}

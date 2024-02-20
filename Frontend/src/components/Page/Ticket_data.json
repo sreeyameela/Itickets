@@ -1,0 +1,463 @@
+[
+    {
+      "Ticket": 1,
+      "Name": "John Doe",
+      "Ticket_ID": "ABC123",
+      "Status": "Open",
+      "Date": "2023-11-17",
+      "TicketsClosed": 2,
+      "TicketsOpened": 5
+    },
+    {
+      "Ticket": 2,
+      "Name": "Jane Smith",
+      "Ticket_ID": "XYZ456",
+      "Status": "Closed",
+      "Date": "2023-11-16",
+      "TicketsClosed": 3,
+      "TicketsOpened": 4
+    },
+    {
+      "Ticket": 3,
+      "Name": "Bob Johnson",
+      "Ticket_ID": "PQR789",
+      "Status": "Open",
+      "Date": "2023-11-15",
+      "TicketsClosed": 1,
+      "TicketsOpened": 6
+    },
+    
+        {
+          "Ticket": 4,
+          "Name": "Alice Williams",
+          "Ticket_ID": "LMN101",
+          "Status": "Closed",
+          "Date": "2023-11-14",
+          "TicketsClosed": 5,
+          "TicketsOpened": 2
+        },
+        {
+          "Ticket": 5,
+          "Name": "Charlie Brown",
+          "Ticket_ID": "DEF222",
+          "Status": "Open",
+          "Date": "2023-11-13",
+          "TicketsClosed": 2,
+          "TicketsOpened": 3
+        },
+        {
+          "Ticket": 6,
+          "Name": "Eva Davis",
+          "Ticket_ID": "GHI333",
+          "Status": "Closed",
+          "Date": "2023-11-12",
+          "TicketsClosed": 4,
+          "TicketsOpened": 1
+        },
+        {
+          "Ticket": 7,
+          "Name": "Frank Miller",
+          "Ticket_ID": "JKL444",
+          "Status": "Open",
+          "Date": "2023-11-11",
+          "TicketsClosed": 3,
+          "TicketsOpened": 2
+        },
+        {
+          "Ticket": 8,
+          "Name": "Grace Wilson",
+          "Ticket_ID": "MNO555",
+          "Status": "Closed",
+          "Date": "2023-11-10",
+          "TicketsClosed": 6,
+          "TicketsOpened": 0
+        },
+        {
+          "Ticket": 9,
+          "Name": "Harry Thompson",
+          "Ticket_ID": "PQR666",
+          "Status": "Open",
+          "Date": "2023-11-09",
+          "TicketsClosed": 1,
+          "TicketsOpened": 4
+        },
+        {
+          "Ticket": 10,
+          "Name": "Ivy Robinson",
+          "Ticket_ID": "STU777",
+          "Status": "Closed",
+          "Date": "2023-11-08",
+          "TicketsClosed": 2,
+          "TicketsOpened": 3
+        },
+        
+            {
+              "Ticket": 11,
+              "Name": "Jack Turner",
+              "Ticket_ID": "VWX888",
+              "Status": "Open",
+              "Date": "2023-11-07",
+              "TicketsClosed": 3,
+              "TicketsOpened": 2
+            },
+            {
+              "Ticket": 12,
+              "Name": "Kelly Garcia",
+              "Ticket_ID": "YZA999",
+              "Status": "Closed",
+              "Date": "2023-11-06",
+              "TicketsClosed": 4,
+              "TicketsOpened": 1
+            },
+            {
+              "Ticket": 13,
+              "Name": "Leo Harris",
+              "Ticket_ID": "BCD000",
+              "Status": "Open",
+              "Date": "2023-11-05",
+              "TicketsClosed": 1,
+              "TicketsOpened": 3
+            },
+            {
+              "Ticket": 14,
+              "Name": "Mia Hall",
+              "Ticket_ID": "EFG111",
+              "Status": "Closed",
+              "Date": "2023-11-04",
+              "TicketsClosed": 5,
+              "TicketsOpened": 0
+            },
+            {
+              "Ticket": 15,
+              "Name": "Noah Clark",
+              "Ticket_ID": "HIJ222",
+              "Status": "Open",
+              "Date": "2023-11-03",
+              "TicketsClosed": 2,
+              "TicketsOpened": 2
+            },
+            {
+              "Ticket": 16,
+              "Name": "Olivia Martinez",
+              "Ticket_ID": "KLM333",
+              "Status": "Closed",
+              "Date": "2023-11-02",
+              "TicketsClosed": 3,
+              "TicketsOpened": 1
+            },
+            {
+              "Ticket": 17,
+              "Name": "Paula Scott",
+              "Ticket_ID": "NOP444",
+              "Status": "Open",
+              "Date": "2023-11-01",
+              "TicketsClosed": 2,
+              "TicketsOpened": 2
+            },
+            {
+              "Ticket": 18,
+              "Name": "Quinn Turner",
+              "Ticket_ID": "QRS555",
+              "Status": "Closed",
+              "Date": "2023-10-31",
+              "TicketsClosed": 4,
+              "TicketsOpened": 0
+            },
+            {
+              "Ticket": 19,
+              "Name": "Raymond Lee",
+              "Ticket_ID": "TUV666",
+              "Status": "Open",
+              "Date": "2023-10-30",
+              "TicketsClosed": 1,
+              "TicketsOpened": 3
+            },
+            {
+              "Ticket": 20,
+              "Name": "Samantha White",
+              "Ticket_ID": "WXY777",
+              "Status": "Closed",
+              "Date": "2023-10-29",
+              "TicketsClosed": 5,
+              "TicketsOpened": 0
+            },
+            
+                {
+                  "Ticket": 21,
+                  "Name": "Trevor Adams",
+                  "Ticket_ID": "ZAB888",
+                  "Status": "Open",
+                  "Date": "2023-10-28",
+                  "TicketsClosed": 3,
+                  "TicketsOpened": 2
+                },
+                {
+                  "Ticket": 22,
+                  "Name": "Ursula Martinez",
+                  "Ticket_ID": "CDE999",
+                  "Status": "Closed",
+                  "Date": "2023-10-27",
+                  "TicketsClosed": 4,
+                  "TicketsOpened": 1
+                },
+                {
+                  "Ticket": 23,
+                  "Name": "Vince Thompson",
+                  "Ticket_ID": "FGH000",
+                  "Status": "Open",
+                  "Date": "2023-10-26",
+                  "TicketsClosed": 1,
+                  "TicketsOpened": 3
+                },
+                {
+                  "Ticket": 24,
+                  "Name": "Wendy Davis",
+                  "Ticket_ID": "IJK111",
+                  "Status": "Closed",
+                  "Date": "2023-10-25",
+                  "TicketsClosed": 5,
+                  "TicketsOpened": 0
+                },
+                {
+                  "Ticket": 25,
+                  "Name": "Xander Miller",
+                  "Ticket_ID": "LMN222",
+                  "Status": "Open",
+                  "Date": "2023-10-24",
+                  "TicketsClosed": 2,
+                  "TicketsOpened": 2
+                },
+                {
+                  "Ticket": 26,
+                  "Name": "Yasmine Harris",
+                  "Ticket_ID": "OPQ333",
+                  "Status": "Closed",
+                  "Date": "2023-10-23",
+                  "TicketsClosed": 3,
+                  "TicketsOpened": 1
+                },
+                {
+                  "Ticket": 27,
+                  "Name": "Zack Robinson",
+                  "Ticket_ID": "RST444",
+                  "Status": "Open",
+                  "Date": "2023-10-22",
+                  "TicketsClosed": 2,
+                  "TicketsOpened": 2
+                },
+                {
+                  "Ticket": 28,
+                  "Name": "Amelia Turner",
+                  "Ticket_ID": "UVW555",
+                  "Status": "Closed",
+                  "Date": "2023-10-21",
+                  "TicketsClosed": 4,
+                  "TicketsOpened": 0
+                },
+                {
+                  "Ticket": 29,
+                  "Name": "Benjamin Scott",
+                  "Ticket_ID": "XYZ666",
+                  "Status": "Open",
+                  "Date": "2023-10-20",
+                  "TicketsClosed": 1,
+                  "TicketsOpened": 3
+                },
+                {
+                  "Ticket": 30,
+                  "Name": "Catherine White",
+                  "Ticket_ID": "ABC777",
+                  "Status": "Closed",
+                  "Date": "2023-10-19",
+                  "TicketsClosed": 5,
+                  "TicketsOpened": 0
+                },
+              
+                
+                    {
+                      "Ticket": 31,
+                      "Name": "David Hall",
+                      "Ticket_ID": "DEF888",
+                      "Status": "Open",
+                      "Date": "2023-10-18",
+                      "TicketsClosed": 3,
+                      "TicketsOpened": 2
+                    },
+                    {
+                      "Ticket": 32,
+                      "Name": "Eva Thompson",
+                      "Ticket_ID": "GHI999",
+                      "Status": "Closed",
+                      "Date": "2023-10-17",
+                      "TicketsClosed": 4,
+                      "TicketsOpened": 1
+                    },
+                    {
+                      "Ticket": 33,
+                      "Name": "Frank Adams",
+                      "Ticket_ID": "JKL000",
+                      "Status": "Open",
+                      "Date": "2023-10-16",
+                      "TicketsClosed": 1,
+                      "TicketsOpened": 3
+                    },
+                    {
+                      "Ticket": 34,
+                      "Name": "Grace Turner",
+                      "Ticket_ID": "MNO111",
+                      "Status": "Closed",
+                      "Date": "2023-10-15",
+                      "TicketsClosed": 5,
+                      "TicketsOpened": 0
+                    },
+                    {
+                      "Ticket": 35,
+                      "Name": "Harry Harris",
+                      "Ticket_ID": "PQR222",
+                      "Status": "Open",
+                      "Date": "2023-10-14",
+                      "TicketsClosed": 2,
+                      "TicketsOpened": 2
+                    },
+                    {
+                      "Ticket": 36,
+                      "Name": "Ivy Miller",
+                      "Ticket_ID": "STU333",
+                      "Status": "Closed",
+                      "Date": "2023-10-13",
+                      "TicketsClosed": 3,
+                      "TicketsOpened": 1
+                    },
+                    {
+                      "Ticket": 37,
+                      "Name": "Jack Turner",
+                      "Ticket_ID": "VWX444",
+                      "Status": "Open",
+                      "Date": "2023-10-12",
+                      "TicketsClosed": 2,
+                      "TicketsOpened": 2
+                    },
+                    {
+                      "Ticket": 38,
+                      "Name": "Kelly Adams",
+                      "Ticket_ID": "YZA555",
+                      "Status": "Closed",
+                      "Date": "2023-10-11",
+                      "TicketsClosed": 4,
+                      "TicketsOpened": 0
+                    },
+                    {
+                      "Ticket": 39,
+                      "Name": "Leo Martinez",
+                      "Ticket_ID": "BCD666",
+                      "Status": "Open",
+                      "Date": "2023-10-10",
+                      "TicketsClosed": 1,
+                      "TicketsOpened": 3
+                    },
+                    {
+                      "Ticket": 40,
+                      "Name": "Mia Hall",
+                      "Ticket_ID": "EFG777",
+                      "Status": "Closed",
+                      "Date": "2023-10-09",
+                      "TicketsClosed": 5,
+                      "TicketsOpened": 0
+                    },
+                    
+                        {
+                          "Ticket": 41,
+                          "Name": "Noah Turner",
+                          "Ticket_ID": "HIJ888",
+                          "Status": "Open",
+                          "Date": "2023-10-08",
+                          "TicketsClosed": 3,
+                          "TicketsOpened": 2
+                        },
+                        {
+                          "Ticket": 42,
+                          "Name": "Olivia Adams",
+                          "Ticket_ID": "KLM999",
+                          "Status": "Closed",
+                          "Date": "2023-10-07",
+                          "TicketsClosed": 4,
+                          "TicketsOpened": 1
+                        },
+                        {
+                          "Ticket": 43,
+                          "Name": "Paula Turner",
+                          "Ticket_ID": "NOP000",
+                          "Status": "Open",
+                          "Date": "2023-10-06",
+                          "TicketsClosed": 1,
+                          "TicketsOpened": 3
+                        },
+                        {
+                          "Ticket": 44,
+                          "Name": "Quinn Davis",
+                          "Ticket_ID": "QRS111",
+                          "Status": "Closed",
+                          "Date": "2023-10-05",
+                          "TicketsClosed": 5,
+                          "TicketsOpened": 0
+                        },
+                        {
+                          "Ticket": 45,
+                          "Name": "Raymond Hall",
+                          "Ticket_ID": "TUV222",
+                          "Status": "Open",
+                          "Date": "2023-10-04",
+                          "TicketsClosed": 2,
+                          "TicketsOpened": 2
+                        },
+                        {
+                          "Ticket": 46,
+                          "Name": "Samantha White",
+                          "Ticket_ID": "WXY333",
+                          "Status": "Closed",
+                          "Date": "2023-10-03",
+                          "TicketsClosed": 3,
+                          "TicketsOpened": 1
+                        },
+                        {
+                          "Ticket": 47,
+                          "Name": "Trevor Adams",
+                          "Ticket_ID": "ZAB444",
+                          "Status": "Open",
+                          "Date": "2023-10-02",
+                          "TicketsClosed": 2,
+                          "TicketsOpened": 2
+                        },
+                        {
+                          "Ticket": 48,
+                          "Name": "Ursula Martinez",
+                          "Ticket_ID": "CDE555",
+                          "Status": "Closed",
+                          "Date": "2023-10-01",
+                          "TicketsClosed": 4,
+                          "TicketsOpened": 0
+                        },
+                        {
+                          "Ticket": 49,
+                          "Name": "Vince Thompson",
+                          "Ticket_ID": "FGH666",
+                          "Status": "Open",
+                          "Date": "2023-09-30",
+                          "TicketsClosed": 1,
+                          "TicketsOpened": 3
+                        },
+                        {
+                          "Ticket": 50,
+                          "Name": "Wendy Davis",
+                          "Ticket_ID": "IJK777",
+                          "Status": "Closed",
+                          "Date": "2023-09-29",
+                          "TicketsClosed": 5,
+                          "TicketsOpened": 0
+                        }                    
+                  
+          
+      
+
+    ]
+  
